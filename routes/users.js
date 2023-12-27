@@ -11,13 +11,14 @@ const userSchema = new mongoose.Schema({
     unique: true,
     trim: true,
   },
+  name: String,
   password: {
     type: String
   },
   posts: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Post',
+      ref: 'post',
     },
   ],
   profileImage: {
